@@ -32,6 +32,13 @@ namespace Aplikacja
             mwidoklisty.Adapter = adapter;
             mwidoklisty.ItemClick += mwidoklisty_klikniecie;
             mwidoklisty.ItemLongClick += mwidoklisty_lonk_klikniecie;
+            mwidoklisty.ItemClick += mwidoklisty_klikniecie_2;
+        }
+
+        private void mwidoklisty_klikniecie_2(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            Console.WriteLine("Krzysiek to najlepszy programista");
+
         }
 
         private void mwidoklisty_lonk_klikniecie(object sender, AdapterView.ItemLongClickEventArgs e)
