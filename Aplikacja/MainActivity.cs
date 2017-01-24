@@ -2,6 +2,7 @@
 using Android.Widget;
 using Android.OS;
 using System.Collections.Generic;
+using System;
 
 namespace Aplikacja
 {
@@ -25,16 +26,22 @@ namespace Aplikacja
             mprzedmiot.Add(new osoba1() { imie = "piotr", nazwisko = "kolasinski", plec = "facet", wiek = "22" });
             mprzedmiot.Add(new osoba1() { imie = "waclaw", nazwisko = "kowalski", plec = "facet", wiek = "22" });
             mprzedmiot.Add(new osoba1() { imie = "daniel", nazwisko = "dudkowski", plec = "shemale", wiek = "12" });
-            /*
-            mprzedmiot.Add("Norbert");
-            mprzedmiot.Add("Kolasinski");
-            mprzedmiot.Add("Czarek");
-            mprzedmiot.Add("Wawer");
-            mprzedmiot.Add("Adam");
-            */
+            
 
             WidokListy adapter = new WidokListy(this, mprzedmiot);
             mwidoklisty.Adapter = adapter;
+            mwidoklisty.ItemClick += mwidoklisty_klikniecie;
+            mwidoklisty.ItemLongClick += mwidoklisty_lonk_klikniecie;
+        }
+
+        private void mwidoklisty_lonk_klikniecie(object sender, AdapterView.ItemLongClickEventArgs e)
+        {
+            Console.WriteLine(mprzedmiot[e.Position].nazwisko);
+        }
+
+        private void mwidoklisty_klikniecie(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            Console.WriteLine(mprzedmiot[e.Position].imie);
         }
     }
 }
