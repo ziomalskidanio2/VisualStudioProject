@@ -57,11 +57,42 @@ namespace Aplikacja
 			}
 		}
 		
+		public partial class Id
+		{
+			
+			// aapt resource value: 0x7f050004
+			public const int listanr1 = 2131034116;
+			
+			// aapt resource value: 0x7f050002
+			public const int txtAge = 2131034114;
+			
+			// aapt resource value: 0x7f050003
+			public const int txtGender = 2131034115;
+			
+			// aapt resource value: 0x7f050001
+			public const int txtLastName = 2131034113;
+			
+			// aapt resource value: 0x7f050000
+			public const int txtname = 2131034112;
+			
+			static Id()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Id()
+			{
+			}
+		}
+		
 		public partial class Layout
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int ListView = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int Main = 2130903041;
 			
 			static Layout()
 			{
