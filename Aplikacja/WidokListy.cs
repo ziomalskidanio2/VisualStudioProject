@@ -35,6 +35,7 @@ namespace Aplikacja
         }
         public override osoba1 this[int position]
         {
+
             get
             {
                 return mprzedmiot[position];
