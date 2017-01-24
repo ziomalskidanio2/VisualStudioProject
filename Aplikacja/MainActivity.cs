@@ -33,6 +33,7 @@ namespace Aplikacja
             mwidoklisty.ItemClick += mwidoklisty_klikniecie;
             mwidoklisty.ItemLongClick += mwidoklisty_lonk_klikniecie;
             mwidoklisty.ItemClick += mwidoklisty_klikniecie_2;
+
         }
 
         private void mwidoklisty_klikniecie_2(object sender, AdapterView.ItemClickEventArgs e)
